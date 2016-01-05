@@ -174,7 +174,8 @@ class OCShareAPI:
         check_request(request)
         jsonfeed = request.json()
         check_status(jsonfeed)
-        return self.get_share_by_id(jsonfeed['ocs']['data']['id'])
+        #return self.get_share_by_id(jsonfeed['ocs']['data']['id'])
+	return jsonfeed['ocs']['data']['url']
 
     def delete_share(self, share):
         """Delete a share"""

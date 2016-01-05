@@ -261,7 +261,8 @@ def run():
                     defaultPermissions(args.share_type)
                 )
             )
-            print("#%d %s %s" % (share.id, share.url, share.path))
+	    print share
+            #print("#%d %s %s" % (share.id, share.url, share.path))
         elif args.subparser_name == "delete":
             ocs.delete_share_by_id(args.id)
         elif args.subparser_name == "update":
